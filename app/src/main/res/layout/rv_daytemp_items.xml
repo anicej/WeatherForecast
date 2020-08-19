@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+    <variable
+        name="item"
+        type="com.anice.weatherforcast.data.model.DailyTempModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tvWeekDay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="@{item.weekDay}"
+            tools:text="30% on beer" />
+
+        <ImageView
+            android:id="@+id/ivWeatherStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintRight_toLeftOf="@id/tvMaxTemp"
+            app:imageResource="@{item.image}"
+            android:layout_margin="3dp"/>
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tvMaxTemp"
+            android:layout_width="wrap_content"
+            android:text="@{item.maxTemp}"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/tvMinTemp"
+             />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tvMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@{item.minTemp}"
+          />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

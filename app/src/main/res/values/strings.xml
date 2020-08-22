@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">CoreAndroidArchitecture</string>
-    <string name="app_name_dev">CoreAndroidArchitecture-Dev</string>
+    <string name="app_name">Weather Forecast</string>
+    <string name="app_name_dev">Weather Forecast</string>
 </resources>
